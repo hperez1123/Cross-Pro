@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  password_digest: MyString
+  industry: MyString
+  image_url: MyText
+  mission: MyText
+  motto: MyText
+  network: false
+  sell: false
+  collaborate: false
+
+two:
+  name: MyString
+  password_digest: MyString
+  industry: MyString
+  image_url: MyText
+  mission: MyText
+  motto: MyText
+  network: false
+  sell: false
+  collaborate: false
