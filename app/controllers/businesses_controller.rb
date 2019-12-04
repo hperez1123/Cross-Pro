@@ -1,14 +1,15 @@
 class BusinessesController < ApplicationController
+  before_action :set_business, only: [:show, :update, :destroy]
   before_action :authorize_request, except: %i[index show]
   
   def index
     @businesses = Business.all
-    render json: @businesses, include: :departments, status: :ok
+    render json: @businesses, include: [:departments, :employees], status: :ok
   end
 
   def show
     @business = Business.find(params[:id])
-    render json: @business, status: :ok
+    render json: @business
   end
 
   def create
@@ -35,7 +36,11 @@ class BusinessesController < ApplicationController
 
   private
 
+  def set_business 
+    @business = Business.find(params[:id])
+
+  end
   def business_params
     params_require(:business).permit(:name, :password, :industry, :image_url, :mission, :motto, :network, :sell, :collaborate)
-
+  end
 end

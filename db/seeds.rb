@@ -35,12 +35,12 @@ Employee.create(name: '', title: '', email: '', image_url: '', phone: '', depart
 
 Business.create(name: 'TWO', industry: 'Logistics', image_url: 'https://media.bizj.us/view/img/5827231/ny78064logo*750xx2392-1350-151-0.jpg', mission: '', motto: '', network: true, sell: false, collaborate: false)
 
-Department.create(name: 'Administration', business_id: 1)
-Department.create(name: 'Finance', business_id: 1)
-Department.create(name: 'Human Resources', business_id: 1)
-Department.create(name: 'Marketing', business_id: 1)
-Department.create(name: 'Operations', business_id: 1)
-Department.create(name: 'Technology', business_id: 1)
+Department.create(name: 'Administration', business_id: 2)
+Department.create(name: 'Finance', business_id: 2)
+Department.create(name: 'Human Resources', business_id: 2)
+Department.create(name: 'Marketing', business_id: 2)
+Department.create(name: 'Operations', business_id: 2)
+Department.create(name: 'Technology', business_id: 2)
 
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
@@ -63,12 +63,12 @@ Employee.create(name: '', title: '', email: '', image_url: '', phone: '', depart
 
 Business.create(name: 'THREE', industry: 'Logistics', image_url: 'https://media.bizj.us/view/img/5827231/ny78064logo*750xx2392-1350-151-0.jpg', mission: '', motto: '', network: true, sell: false, collaborate: false)
 
-Department.create(name: 'Administration', business_id: 1)
-Department.create(name: 'Finance', business_id: 1)
-Department.create(name: 'Human Resources', business_id: 1)
-Department.create(name: 'Marketing', business_id: 1)
-Department.create(name: 'Operations', business_id: 1)
-Department.create(name: 'Technology', business_id: 1)
+Department.create(name: 'Administration', business_id: 3)
+Department.create(name: 'Finance', business_id: 3)
+Department.create(name: 'Human Resources', business_id: 3)
+Department.create(name: 'Marketing', business_id: 3)
+Department.create(name: 'Operations', business_id: 3)
+Department.create(name: 'Technology', business_id: 3)
 
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
@@ -91,12 +91,12 @@ Employee.create(name: '', title: '', email: '', image_url: '', phone: '', depart
 
 Business.create(name: 'FOUR', industry: 'Logistics', image_url: 'https://media.bizj.us/view/img/5827231/ny78064logo*750xx2392-1350-151-0.jpg', mission: '', motto: '', network: true, sell: false, collaborate: false)
 
-Department.create(name: 'Administration', business_id: 1)
-Department.create(name: 'Finance', business_id: 1)
-Department.create(name: 'Human Resources', business_id: 1)
-Department.create(name: 'Marketing', business_id: 1)
-Department.create(name: 'Operations', business_id: 1)
-Department.create(name: 'Technology', business_id: 1)
+Department.create(name: 'Administration', business_id: 4)
+Department.create(name: 'Finance', business_id: 4)
+Department.create(name: 'Human Resources', business_id: 4)
+Department.create(name: 'Marketing', business_id: 4)
+Department.create(name: 'Operations', business_id: 4)
+Department.create(name: 'Technology', business_id: 4)
 
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
@@ -119,12 +119,12 @@ Employee.create(name: '', title: '', email: '', image_url: '', phone: '', depart
 
 Business.create(name: 'FIVE', industry: 'Logistics', image_url: 'https://media.bizj.us/view/img/5827231/ny78064logo*750xx2392-1350-151-0.jpg', mission: '', motto: '', network: true, sell: false, collaborate: false)
 
-Department.create(name: 'Administration', business_id: 1)
-Department.create(name: 'Finance', business_id: 1)
-Department.create(name: 'Human Resources', business_id: 1)
-Department.create(name: 'Marketing', business_id: 1)
-Department.create(name: 'Operations', business_id: 1)
-Department.create(name: 'Technology', business_id: 1)
+Department.create(name: 'Administration', business_id: 5)
+Department.create(name: 'Finance', business_id: 5)
+Department.create(name: 'Human Resources', business_id: 5)
+Department.create(name: 'Marketing', business_id: 5)
+Department.create(name: 'Operations', business_id: 5)
+Department.create(name: 'Technology', business_id: 5)
 
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)
 Employee.create(name: '', title: '', email: '', image_url: '', phone: '', department_id: 1)

@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
-
+  before_action :set_employee, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: %i[index show]
   def index
     @department = Department.find(params[:department_id])
     @employees = Employee.where(department_id: @department.id)
@@ -35,6 +36,9 @@ class EmployeesController < ApplicationController
   
   private
   
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
   def employee_params
     params.require(:department).permit(:name, :title, :email, :image_url, :phone)
   end
