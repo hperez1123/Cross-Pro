@@ -11,23 +11,12 @@ class ApplicationController < ActionController::API
     HashWithIndifferentAccess.new decoded
   end
 
-  def create
-    @user = User.new(user_params)
-    
-    if @user.save
-      @token = encode({user_id: @user.id, username: @user.username});
-      render json: {user: @user, token: @token}, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
-
   def authorize_request
     header = request.headers['Authorization']
     header = header.split(' ').last if header
     begin
       @decoded = decode(header)
-      @current_user = User.find(@decoded[:user_id])
+      @current_business = Business.find(@decoded[:business_id])
     rescue ActiveRecord::RecordNotFound => e
       render json: { errors: e.message }, status: :unauthorized
     rescue JWT::DecodeError => e

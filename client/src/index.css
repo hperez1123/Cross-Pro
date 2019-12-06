@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  text-align: center;
+}
+
+/*====================================== HEADER COMPONENT ============================================*/
+
+#header {
+  width: 100%;
+  background-color: blue;
+}
+
+#hero {
+  font-size: 5em;
+}
+
+/*====================================== FOOTER COMPONENT ============================================*/
+
+#footer {
+  position: absolute;
+  height: 10vh;
+  line-height: 10vh;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  color: white;
+}

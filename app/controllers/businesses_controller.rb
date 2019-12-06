@@ -1,10 +1,10 @@
 class BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :update, :destroy]
-  before_action :authorize_request, except: %i[index show]
+  before_action :authorize_request, except: %i[index show create]
   
   def index
     @businesses = Business.all
-    render json: @businesses, include: [:departments, :employees], status: :ok
+    render json: @businesses, include: { departments: { include: :employees } }, status: :ok
   end
 
   def show
@@ -15,7 +15,7 @@ class BusinessesController < ApplicationController
   def create
     @newBusiness = Business.new(business_params)
       if @newBusiness.save
-        render json: {business: @newBusiness}, status: :created
+        render json: @newBusiness, status: :created
       else
         render json: {error: @newBusiness.errors}, status: :unprocessible_entity
       end
@@ -41,6 +41,6 @@ class BusinessesController < ApplicationController
 
   end
   def business_params
-    params_require(:business).permit(:name, :password, :industry, :image_url, :mission, :motto, :network, :sell, :collaborate)
+    params.require(:business).permit(:name, :password, :industry, :image_url, :mission, :motto, :network, :sell, :collaborate)
   end
 end
