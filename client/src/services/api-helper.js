@@ -82,7 +82,7 @@ export const getAllDepartments = async (id) => {
   return resp.data;
 }
 
-export const getDepartments = async (id, getData) => {
+export const getDepartment = async (id, getData) => {
   const resp = await api.get(`/businesses/:id/departments/${id}`, getData);
   return resp.data;
 }
@@ -109,22 +109,22 @@ export const indexEmployees = async (businessId, departmentId) => {
   return resp.data
 }
 
-export const showEmployeesById = async (businessId, departmentId, employeeId ) => {
+export const showEmployee = async (businessId, departmentId, employeeId) => {
   const resp = await api.get(`/businesses/${businessId}/departments/${departmentId}/employees/${employeeId}`);
   return resp.data
 }
 
-export const postEmployees = async (businessId, departmentId, postData) => {
+export const postEmployee = async (businessId, departmentId, postData) => {
   const resp = await api.post(`/businesses/${businessId}/departments/${departmentId}/employees`, postData);
   return resp.data
 }
 
-export const putEmployees = async (businessId, putData) => {
-  const resp = await api.put(`/businesses/${businessId}/departments/${putData.location_id}/employees/${putData.id}`, putData);
+export const putEmployee = async (businessId, departmentId, employeeId, putData) => {
+  const resp = await api.put(`/businesses/${businessId}/departments/${departmentId}/employees/${employeeId}`, putData);
   return resp.data
 }
 
-export const destroyEmployees = async (id, deleteData) => {
-  const resp = await api.delete(`/businesses/${id}/departments/${id}/employees/${id}`, deleteData);
+export const destroyEmployee = async (businessId, departmentId, id) => {
+  const resp = await api.delete(`/businesses/${id}/departments/${id}/employees/${id}`);
   return resp.data
 }

@@ -1,42 +1,30 @@
 import React from 'react';
-import { getAllDepartments, indexEmployees, showEmployeesById } from '../services/api-helper'
+import { getBusiness, } from '../services/api-helper'
+import { Link } from 'react-router-dom'
 
-import { Link } from 'react-router-dom';
 
-export default class Profile extends React.Component {
+export default class EditProfile extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      business: null,
       departments: [],
       employees: []
     }
-    console.log(props)
   }
 
   async componentDidMount() {
-    if (this.props.currentBusiness) {
-      const departments = await getAllDepartments(this.props.currentBusiness.id)
-      this.setState({ departments })
-    }
+    const business = await getBusiness();
+    this.setState({ business })
   }
 
-  async componentDidUpdate(prevProps) {
-    if (prevProps.currentBusiness !== this.props.currentBusiness) {
-      const departments = await getAllDepartments(this.props.currentBusiness.id)
-      this.setState({ departments })
-    }
-  }
-  
+
+
   render() {
-    const { currentBusiness } = this.props
     return (
       <div>
 
-      
-        {
-          currentBusiness &&
-          <h2>Hello {currentBusiness.name}</h2>
-        }
+
 
         {
           this.state.departments &&
@@ -44,7 +32,7 @@ export default class Profile extends React.Component {
             <div key={department.id}>
               <Link to={`/departments/${department.id}`}>
                 <h1>{department.name} Department</h1>
-              </Link>
+              </Link> </div>
               <div className="department-employees">
                 {
                   department.employees.map(employee => (
@@ -56,19 +44,16 @@ export default class Profile extends React.Component {
                     </Link>
                   ))
                 }
-              </div>
-              <Link to={`/departments/${department.id}/new-employee`}>
-                <button>Add Employee</button>
-              </Link>
-            </div>
           ))
         }
 
 
+        
         {
           currentBusiness &&
           <Link to="/businesses">Check Profiles</Link>
         }
+              
       </div>
     )
   }

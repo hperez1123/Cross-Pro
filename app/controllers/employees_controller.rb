@@ -39,7 +39,8 @@ class EmployeesController < ApplicationController
   def set_employee
     @employee = Employee.find(params[:id])
   end
+  
   def employee_params
-    params.require(:department).permit(:name, :title, :email, :image_url, :phone)
+    params.require(:employee).permit(:name, :title, :email, :image_url, :phone, :department_id)
   end
 end

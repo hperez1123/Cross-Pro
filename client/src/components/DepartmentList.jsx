@@ -20,7 +20,7 @@ export default class DepartmentList extends React.Component {
   }
 
   async componentDidUpdate(prevProps) {
-    if (prevProps.currentBusiness !== this.props.currentBusiness) {
+    if (props.currentBusiness && prevProps.currentBusiness !== this.props.currentBusiness) {
       const departments = await getAllDepartments(this.props.currentBusiness.id)
       this.setState({ departments })
     }
@@ -64,7 +64,7 @@ export default class DepartmentList extends React.Component {
                 this.state.employees.map(employee => (
                   <div>{employee.name} </div>
                 ))
-          }
+              }
             </div>
           ))
         }

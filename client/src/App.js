@@ -39,9 +39,9 @@ class App extends Component {
         <Header
           currentBusiness={this.state.currentBusiness}
           handleLogout={this.handleLogout} />
-        <BusinessContainer currentBusiness={this.state.currentBusiness} />
-        {/* <Profile currentBusiness={this.state.currentBusiness} />
-        <Main currentBusiness={this.state.currentBusiness} /> */}
+        {/* <BusinessContainer currentBusiness={this.state.currentBusiness} /> */}
+        
+        <Main currentBusiness={this.state.currentBusiness} />
         <Footer />
       </div>
     );

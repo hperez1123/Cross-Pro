@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class BusinessContainer extends React.Component{
+export default class BusinessContainer extends React.Component {
   state = {
     currentBusiness: null
   }
@@ -9,9 +9,8 @@ export default class BusinessContainer extends React.Component{
   render() {
     return (
       <div>
-        
+
       </div>
     )
   }
-
 }
