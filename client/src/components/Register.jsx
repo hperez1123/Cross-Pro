@@ -27,12 +27,9 @@ class Register extends Component {
   }
 
   render() {
-
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div id="register-text-helper"><h2 id="register-text">Register</h2></div>
-          <div>
+        <form onSubmit={this.handleSubmit} id="register-page">
+        <h2 id="register-text">Register</h2>
             <label htmlFor='name'>Business Name</label>
             <input
               type="text"
@@ -49,10 +46,8 @@ class Register extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-          </div>
           <button className="create">Create Profile</button>
         </form>
-      </div>
     )
   }
 }

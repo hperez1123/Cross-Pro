@@ -14,27 +14,65 @@ code {
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
 /*====================================== HEADER COMPONENT ============================================*/
 
 #header {
   width: 100%;
-  background-color: blue;
+  background-color: red;
 }
 
 #hero {
   font-size: 5em;
 }
+/*====================================== LOGIN COMPONENT ============================================*/
+
+.login{
+  height: 100vh;
+}
+
+#login-page{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 32.5em;
+  width: 30em;
+  background-color: green;
+}
+
+/*====================================== REGISTER COMPONENT ============================================*/
+
+#register-page {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 32.5em;
+  width: 30em;
+  background-color: gray;
+}
+
+/*====================================== MAIN COMPONENT ============================================*/
+
+
+
+/*====================================== LIST COMPONENT ============================================*/
+
+#listing {
+  background-color: blue;
+}
 
 /*====================================== FOOTER COMPONENT ============================================*/
 
 #footer {
-  position: absolute;
-  height: 10vh;
-  line-height: 10vh;
+  height: 5em;
+  line-height: 5em;
   width: 100%;
-  bottom: 0;
   background-color: black;
   color: white;
 }

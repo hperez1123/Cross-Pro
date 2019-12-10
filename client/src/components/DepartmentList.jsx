@@ -1,9 +1,8 @@
 import React from 'react';
 import { getAllDepartments, indexEmployees, showEmployeesById } from '../services/api-helper'
-
 import { Link } from 'react-router-dom';
 
-export default class Profile extends React.Component {
+export default class DepartmentList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

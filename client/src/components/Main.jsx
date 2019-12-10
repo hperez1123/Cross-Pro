@@ -6,11 +6,11 @@ import Profile from './Profile';
 import { Link, Route } from 'react-router-dom';
 
 export default function Main(props) {
+  console.log(props)
   return (
-    <div>
+    <div id="main">
       <Route path="/login" render={() => <Login />} />
       <Route path="/register" render={() => <Register />} />
-      <Route exact path="/" render={() => <Profile currentBusiness={props.currentBusiness} />} />
       <Route path="/businesses" render={() => <ProfileListing />} />
     </div>
   )

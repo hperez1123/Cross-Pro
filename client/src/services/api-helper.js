@@ -1,7 +1,14 @@
 import axios from 'axios';
 
+
+// const baseURL = "https://cross-promote.herokuapp.com/"
+
+
+// Use 3000 for local editing
+const baseURL = "http://localhost:3000"
+
 const api = axios.create({
-  baseURL: "http://localhost:3000"
+  baseURL: baseURL
 })
 
 // =========== Auth ================
@@ -70,8 +77,8 @@ export const deleteBusiness = async (id) => {
 
 // ================== Seeded Departments ==================
 
-export const getAllDepartments = async (id, getData) => {
-  const resp = await api.get(`/businesses/${id}/departments`, getData);
+export const getAllDepartments = async (id) => {
+  const resp = await api.get(`/businesses/${id}/departments`);
   return resp.data;
 }
 
@@ -102,8 +109,8 @@ export const indexEmployees = async (businessId, departmentId) => {
   return resp.data
 }
 
-export const showEmployees = async (id, getData) => {
-  const resp = await api.get(`/businesses/${id}/departments/${id}/employees/${id}`, getData);
+export const showEmployeesById = async (businessId, departmentId, employeeId ) => {
+  const resp = await api.get(`/businesses/${businessId}/departments/${departmentId}/employees/${employeeId}`);
   return resp.data
 }
 
