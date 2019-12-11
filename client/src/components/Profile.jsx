@@ -31,26 +31,28 @@ export default class Profile extends React.Component {
     const { currentBusiness } = this.props
     return (
       <div>
-
+        {
+          currentBusiness &&
+          <Link to="/businesses"><button id="search-button">Come Check Other Profiles!</button></Link>
+        }
       
         {
           currentBusiness &&
-          <h2>Hello {currentBusiness.name}</h2>
+          <h3>Hello {currentBusiness.name}</h3>
         }
-
         {
           this.state.departments &&
           this.state.departments.map(department => (
-            <div key={department.id}>
+            <div key={department.id} className="department-div">
               <Link to={`/departments/${department.id}`}>
-                <h1>{department.name} Department</h1>
+                <h4>{department.name} Department</h4>
               </Link>
               <div className="department-employees">
                 {
                   department.employees.map(employee => (
                     <Link to={`/departments/${department.id}/employees/${employee.id}`}>
                       <div className="home-employee-deets">{employee.name}
-                        <img src={employee.image_url} />
+                        <img src={employee.image_url} className="portrait"/>
                         <p>{employee.title}</p>
                       </div>
                     </Link>
@@ -58,16 +60,10 @@ export default class Profile extends React.Component {
                 }
               </div>
               <Link to={`/departments/${department.id}/new-employee`}>
-                <button>Add Employee</button>
+                <button id="add-employee">Add Employee</button>
               </Link>
             </div>
           ))
-        }
-
-
-        {
-          currentBusiness &&
-          <Link to="/businesses">Check Profiles</Link>
         }
       </div>
     )

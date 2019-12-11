@@ -51,14 +51,14 @@ export default class DepartmentList extends React.Component {
       <div>
         {
           currentBusiness &&
-          <h2>Hello {currentBusiness.name}</h2>
+          <h3>Hello {currentBusiness.name}</h3>
         }
 
         {
           this.state.departments &&
           this.state.departments.map(profile => (
             <div key={profile.id}>
-              <h1>{profile.name} Department</h1>
+              <h4>{profile.name} Department</h4>
               {
                 this.state.employees &&
                 this.state.employees.map(employee => (

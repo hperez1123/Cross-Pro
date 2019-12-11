@@ -15,51 +15,103 @@ code {
 .App {
   text-align: center;
   height: 100%;
+  background-color: #EDF0F5;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 /*====================================== HEADER COMPONENT ============================================*/
 
 #header {
   width: 100%;
-  background-color: red;
+  background-color:#3A5898;
 }
 
 #hero {
   font-size: 5em;
-}
-/*====================================== LOGIN COMPONENT ============================================*/
-
-.login{
-  height: 100vh;
+  color: white;
 }
 
-#login-page{
+#header a {
+  text-decoration: none;
+}
+
+.front-page-buttons {
+border-radius: 5px;
+margin-left: 10em;
+margin-right: 10em;
+margin-bottom: 0.5em;
+background-color: cornflowerblue;
+color: white;
+border: 0.5px solid darkblue;
+outline: none;
+}
+
+.front-page-buttons:focus {
+outline: none; 
+}
+
+.front-page-buttons:hover {
+background-color: royalblue; 
+}
+
+.front-page-buttons:active {
+background-color: rgb(52, 52, 200);
+}
+/*====================================== LOGIN/REGISTER COMPONENT ============================================*/
+
+.log-register-page{
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 32.5em;
+  height: 36.5em;
   width: 30em;
-  background-color: green;
+  background-color:#EDF0F5;
 }
 
-/*====================================== REGISTER COMPONENT ============================================*/
+.spacing {
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
 
-#register-page {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 32.5em;
-  width: 30em;
-  background-color: gray;
+.space2{
+margin-bottom: 3.5em;
+border-radius: 5px;
+}
+
+form h2 {
+font-size: 3.5em;
+}
+
+.button-log-register {
+margin-bottom: 2em; 
+border-radius: 5px;
+height: 35px;
+width: 170px;
+background-color: #3A5898;
+color: white;
+font-weight: bold;
+}
+
+.button-log-register:focus {
+outline: none; 
+}
+
+.button-log-register:hover {
+background-color: royalblue; 
+}
+
+.button-log-register:active {
+background-color: rgb(52, 52, 200);
 }
 
 /*====================================== MAIN COMPONENT ============================================*/
 #main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .department-employees {
@@ -74,30 +126,136 @@ code {
 .home-employee-deets img {
   display: block;
   margin: 0 auto;
-  width: 75px;
-  height: 100px;
+  width: 150px;
+  height: 200px;
 }
 
 #employee-profile img {
   width: 300px;
 }
 
-/*====================================== FORM COMPONENT ============================================*/
-
-
-
 /*====================================== LIST COMPONENT ============================================*/
 
 #listing {
-  background-color: blue;
+  background-color: white;
+  display: grid;
+  width: 25%;
+  margin: 15px auto;
+  grid-template-columns: 1fr;
+}
+
+#listing img {
+  height: 200px;
+  width: 300px;
+}
+
+/*====================================== YOUR PROFILE COMPONENT ============================================*/
+
+.department-div {
+  background-color: white;
+  border: 1px solid #3A5898;
+  margin: 3em;
+  padding: 1em;
+}
+
+.department-div h4 {
+  color: black;
+}
+
+/*====================================== EMPLOYEE PROFILE COMPONENT ============================================*/
+
+#employee-profile {
+  border: 1px black solid;
+  margin: 2em;
+  padding: 3em;
+}
+
+#search-button {
+position: absolute;
+right: 0;
+height: 3em;
+margin: 1em;
+background-color: #3A5898;
+color: white;
+font-weight: bold;
+}
+
+#search-button:focus {
+outline: none; 
+}
+
+#search-button:hover {
+background-color: royalblue; 
+}
+
+#search-button:active {
+background-color: rgb(52, 52, 200);
+}
+
+.portrait {
+border: 1px black solid;
+}
+
+.profile-buttons {
+border-radius: 5px;
+margin-left: 1em;
+margin-right: 1em;
+background-color: cornflowerblue;
+color: white;
+border: 0.5px solid darkblue;
+}
+
+.profile-buttons:focus {
+outline: none; 
+}
+
+.profile-buttons:hover {
+background-color: royalblue; 
+}
+
+.profile-buttons:active {
+background-color: rgb(52, 52, 200);
+}
+
+#add-employee {
+color: white;
+border: 0.5 darkblue solid;
+border-radius: 5px;
+background-color: cornflowerblue;
+
+}
+
+#add-employee:focus {
+outline: none; 
+}
+
+#add-employee:hover {
+background-color: royalblue; 
+}
+
+#add-employee:active {
+background-color: rgb(52, 52, 200);
+}
+
+/*====================================== FORM COMPONENT ============================================*/
+
+.update-form {
+display: grid;
+width: 100%;
+margin: 0 auto;
 }
 
 /*====================================== FOOTER COMPONENT ============================================*/
 
 #footer {
-  height: 5em;
-  line-height: 5em;
+  height: 4em;
+  line-height: 4em;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #3A5898;
+}
+
+#footer-text {
+  font-size: 28px;
+  font-weight: bolder;
 }

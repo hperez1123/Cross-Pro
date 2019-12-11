@@ -30,26 +30,28 @@ class Login extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit} id="login-page">
-          <h2>Log In</h2>
-          <label htmlFor='name'>name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-          <label htmlFor='password'>password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
-          <button>Login</button>
-        </form>
+      <form onSubmit={this.handleSubmit} className="log-register-page">
+        <h2 className="spacing">Log In</h2>
+        <label htmlFor='name'>Business Name</label>
+        <input
+          className="space2"
+          type="text"
+          name="name"
+          id="name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <label htmlFor='password'>Password</label>
+        <input
+          className="spacing"
+          type="password"
+          name="password"
+          id="password"
+          value={this.state.password}
+          onChange={this.handleChange}
+        />
+        <button className="button-log-register">Login</button>
+      </form>
     )
   }
 }

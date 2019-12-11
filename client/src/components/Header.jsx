@@ -5,17 +5,17 @@ export default function Header(props) {
 
   return (
     <header id="header">
-      <Link to="/"><h2 id="hero">Cross - Promote</h2></Link>
+      <Link to="/"><h1 id="hero">Cross - Promote</h1></Link>
       {
         props.currentBusiness ?
           <>
-            <Link to="/">Home</Link>
-            <Link to="/login" onClick={props.handleLogout}>Log out</Link>
+            <Link to="/" ><button className="front-page-buttons">Home</button></Link>
+            <Link to="/login" onClick={props.handleLogout}><button className="front-page-buttons">Log out</button></Link>
           </>
           :
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Sign Up</Link>
+            <Link to="/login"><button className="front-page-buttons">Login</button></Link>
+            <Link to="/register"><button className="front-page-buttons">Sign Up</button></Link>
           </>
       }
     </header>

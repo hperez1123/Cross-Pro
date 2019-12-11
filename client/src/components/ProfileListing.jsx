@@ -17,16 +17,16 @@ export default class ProfileListing extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="homos">
         {
           this.state.businesses.map(business => (
             <div id="listing" key={business.id}>
               <Link to={`/businesses/${business.id}`}>
-                <h1>{business.name}</h1></Link>
-              <h3>{business.industry}</h3>
+                <h4>{business.name}</h4></Link>
+              <h4>{business.industry}</h4>
               <img src={business.image_url} />
               <h4>{business.mission}</h4>
-              <h5>{business.motto}</h5>
+              <h4>{business.motto}</h4>
             </div>
           )
           )}

@@ -38,7 +38,7 @@ class EmployeeForm extends React.Component {
     console.log(this.props)
     const { name, title, email, image_url, phone } = this.state.formData
     return (
-      <div>
+      <div className="update-form">
         <p>employee form...</p>
         <form onSubmit={this.handleSubmit}>
           <label>name</label><input

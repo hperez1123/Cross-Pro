@@ -29,15 +29,15 @@ class EmployeeProfile extends React.Component {
         {
           employee &&
           <>
-            <h3>{employee.name}</h3>
-            <img src={employee.image_url} />
+            <h4>{employee.name}</h4>
+            <img src={employee.image_url} className="portrait"/>
             <h4>{employee.title}</h4>
             <h4>{employee.email}</h4>
             <p>{employee.phone}</p>
             <Link to={`/departments/${departmentId}/employees/${employee.id}/update`}>
-              <button>Update Profile</button>
+              <button class="profile-buttons">Update Profile</button>
             </Link>
-            <button onClick={this.handleDelete}>Fire {employee.name}</button>
+            <button onClick={this.handleDelete} className="profile-buttons">Fire {employee.name}</button>
           </>
         }
       </div>
