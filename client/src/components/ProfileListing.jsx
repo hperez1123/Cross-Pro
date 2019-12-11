@@ -24,7 +24,7 @@ export default class ProfileListing extends React.Component {
               <Link to={`/businesses/${business.id}`}>
                 <h4>{business.name}</h4></Link>
               <h4>{business.industry}</h4>
-              <img src={business.image_url} />
+              <img src={business.image_url} alt="Logo" />
               <h4>{business.mission}</h4>
               <h4>{business.motto}</h4>
             </div>

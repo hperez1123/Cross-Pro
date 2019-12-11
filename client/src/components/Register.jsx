@@ -30,7 +30,7 @@ class Register extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="log-register-page">
         <h2 className="spacing">Register</h2>
-        <label htmlFor='name'>Business Name</label>
+        <label htmlFor='name' className="log-register-text">Business Name</label>
         <input
           className="space2"
           type="text"
@@ -39,7 +39,7 @@ class Register extends Component {
           value={this.state.profile}
           onChange={this.handleChange}
         />
-        <label htmlFor='password'>Password</label>
+        <label htmlFor='password' className="log-register-text">Password</label>
         <input
           className="spacing"
           type="password"

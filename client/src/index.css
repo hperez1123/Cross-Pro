@@ -62,6 +62,10 @@ background-color: rgb(52, 52, 200);
 }
 /*====================================== LOGIN/REGISTER COMPONENT ============================================*/
 
+.log-register-text {
+  font-size: bold;
+}
+
 .log-register-page{
   margin: auto;
   display: flex;

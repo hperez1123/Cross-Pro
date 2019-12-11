@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import Profile from './components/Profile';
-import BusinessContainer from './components/BusinessContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { verifyBusiness } from './services/api-helper';
 

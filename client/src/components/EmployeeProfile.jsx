@@ -30,7 +30,7 @@ class EmployeeProfile extends React.Component {
           employee &&
           <>
             <h4>{employee.name}</h4>
-            <img src={employee.image_url} className="portrait"/>
+            <img src={employee.image_url} alt="Portrait" className="portrait"/>
             <h4>{employee.title}</h4>
             <h4>{employee.email}</h4>
             <p>{employee.phone}</p>

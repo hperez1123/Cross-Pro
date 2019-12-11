@@ -36,7 +36,7 @@ export default class ProfileView extends React.Component {
                     department.employees.map(employee => (
                       <Link to={`/departments/${department.id}/employees/${employee.id}`}>
                         <div className="home-employee-deets">{employee.name}
-                          <img src={employee.image_url} className="portrait"/>
+                          <img src={employee.image_url} alt="Portrait" className="portrait"/>
                           <p>{employee.title}</p>
                         </div>
                       </Link>

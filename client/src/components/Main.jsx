@@ -8,7 +8,7 @@ import EmployeeProfile from './EmployeeProfile';
 import EmployeeForm from './EmployeeForm';
 import EmployeeUpdateForm from './EmployeeUpdateForm';
 import ProfileView from './ProfileView';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 export default function Main(props) {
   const { currentBusiness } = props

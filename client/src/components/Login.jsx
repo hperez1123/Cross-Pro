@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { loginBusiness } from '../services/api-helper';
 
 class Login extends Component {
@@ -32,7 +32,7 @@ class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="log-register-page">
         <h2 className="spacing">Log In</h2>
-        <label htmlFor='name'>Business Name</label>
+        <label htmlFor='name' className="log-register-text">Business Name</label>
         <input
           className="space2"
           type="text"
@@ -41,7 +41,7 @@ class Login extends Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <label htmlFor='password'>Password</label>
+        <label htmlFor='password' className="log-register-text">Password</label>
         <input
           className="spacing"
           type="password"
