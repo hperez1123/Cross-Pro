@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 
-// const baseURL = "https://cross-promote.herokuapp.com/"
+const baseURL = "https://cross-promote.herokuapp.com/"
 
 
 // Use 3000 for local editing
-const baseURL = "http://localhost:3000"
+// const baseURL = "http://localhost:3000"
 
 const api = axios.create({
   baseURL: baseURL
